@@ -4089,6 +4089,7 @@ images
 .mil-image-frame {
   position: relative; 
   overflow: hidden;
+  width: 100%;
 }
 .mil-image-frame > img {
   position: absolute;
@@ -4144,6 +4145,74 @@ images
   width: 17px;
 }
 .mil-image-frame:hover .mil-zoom-btn {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  z-index: 2;
+}
+
+
+
+
+
+.mil-image-frame2 {
+  position: relative;
+  overflow: hidden;
+  width: 100%; /* or 100% if you want it fluid */
+}
+
+.mil-image-frame2 > img {
+  width: 100%;
+  height: auto;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.mil-image-frame2.mil-horizontal {
+  padding-bottom: 65%;
+}
+.mil-image-frame2.mil-vertical {
+  padding-bottom: 5%;
+}
+.mil-image-frame2.mil-square {
+  padding-bottom: 100%;
+}
+.mil-image-frame2.mil-fw {
+  padding-bottom: 50%;
+}
+.mil-image-frame2 .mil-zoom-btn {
+  opacity: 0;
+  -webkit-transform: translateY(15px);
+          transform: translateY(15px);
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  -webkit-transition: 0.4s cubic-bezier(0, 0, 0.3642, 1);
+  transition: 0.4s cubic-bezier(0, 0, 0.3642, 1);
+}
+.mil-image-frame2 .mil-zoom-btn:hover {
+  background-color: rgb(255, 255, 255);
+}
+.mil-image-frame2 .mil-zoom-btn img {
+  height: 17px;
+  width: 17px;
+}
+.mil-image-frame2:hover .mil-zoom-btn {
   opacity: 1;
   -webkit-transform: translateY(0);
           transform: translateY(0);
